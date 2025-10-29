@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎬 Exclusive Movie Access - Loading...</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .header {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+        
+        .countdown {
+            font-size: 3em;
+            font-weight: bold;
+            margin: 30px 0;
+            color: #ffeb3b;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .ad-container {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 15px 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .ad-label {
+            font-size: 0.9em;
+            opacity: 0.7;
+            margin-bottom: 10px;
+        }
+        
+        .ad-unit {
+            width: 100%;
+            height: 250px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px 0;
+            font-size: 1.1em;
+        }
+        
+        .continue-btn {
+            background: linear-gradient(45deg, #FF416C, #FF4B2B);
+            color: white;
+            border: none;
+            padding: 20px 40px;
+            font-size: 1.3em;
+            border-radius: 50px;
+            cursor: pointer;
+            margin: 30px 0;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .continue-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(255, 75, 43, 0.3);
+        }
+        
+        .continue-btn:disabled {
+            background: #666;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+        
+        .footer {
+            margin-top: 30px;
+            opacity: 0.7;
+            font-size: 0.9em;
+        }
+        
+        @media (max-width: 768px) {
+            .header {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .countdown {
+                font-size: 2.5em;
+            }
+            
+            .ad-unit {
+                height: 200px;
+            }
+        }
+    </style>
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+    
+    <!-- Media.net -->
+    <script type="text/javascript">
+        window._mNHandle = window._mNHandle || {};
+        window._mNHandle.queue = window._mNHandle.queue || [];
+        medianet_versionId = "XXXXXXXXXX";
+    </script>
+    <script src="https://contextual.media.net/dmedianet.js?cid=XXXXXXXXXX" async="async"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎬 Premium Movie Access</h1>
+            <p class="subtitle">Your exclusive portal to unlimited movies and shows</p>
+            
+            <div class="countdown" id="countdown">{{ ad_delay }}</div>
+            
+            <p>Please wait while we verify your access...</p>
+        </div>
+
+        <!-- Google AdSense Display Ad -->
+        <div class="ad-container">
+            <div class="ad-label">Sponsored Content</div>
+            <div class="ad-unit">
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                     data-ad-slot="XXXXXXXXXX"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </div>
+
+        <!-- Media.net Ad -->
+        <div class="ad-container">
+            <div class="ad-label">Recommended For You</div>
+            <div id="XXXXXXXXXX">
+                <script>
+                    try {
+                        window._mNHandle.queue.push(function () {
+                            window._mNHandle.TagManager.createAd("XXXXXXXXXX", "300x250");
+                        });
+                    } catch (error) {}
+                </script>
+            </div>
+        </div>
+
+        <!-- PropellerAds -->
+        <div class="ad-container">
+            <div class="ad-label">Special Offer</div>
+            <div class="ad-unit">
+                <script type="text/javascript" src="https://s.aads-cn.net/XXXXXXXXXX.js"></script>
+            </div>
+        </div>
+
+        <!-- Adsterra Popunder -->
+        <script type="text/javascript">
+            atOptions = {
+                'key' : 'xxxxxxxxxxxxxxxxxxxxxxxx',
+                'format' : 'iframe',
+                'height' : 250,
+                'width' : 300,
+                'params' : {}
+            };
+            document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.profitabledisplaynetwork.com/xxxxxxxxxxxx/invoke.js"></scr' + 'ipt>');
+        </script>
+
+        <a href="/redirect" class="continue-btn" id="continueBtn" onclick="return false;">
+            Continue to Movies 🎥
+        </a>
+        
+        <div class="footer">
+            <p>By continuing, you agree to our Terms of Service</p>
+            <p>This site contains advertisements</p>
+        </div>
+    </div>
+
+    <script>
+        let countdown = {{ ad_delay }};
+        const countdownElement = document.getElementById('countdown');
+        const continueBtn = document.getElementById('continueBtn');
+        
+        function updateCountdown() {
+            countdownElement.textContent = countdown;
+            
+            if (countdown <= 0) {
+                countdownElement.textContent = "Ready!";
+                continueBtn.removeAttribute('onclick');
+                continueBtn.style.background = 'linear-gradient(45deg, #4CAF50, #45a049)';
+                continueBtn.innerHTML = 'Continue to Movies 🎥';
+                continueBtn.href = '{{ redirect_url }}';
+                return;
+            }
+            
+            countdown--;
+            setTimeout(updateCountdown, 1000);
+        }
+        
+        // Start countdown
+        updateCountdown();
+        
+        // Force popunder after 5 seconds
+        setTimeout(() => {
+            try {
+                window.open('{{ redirect_url }}', '_blank').blur();
+                window.focus();
+            } catch (e) {}
+        }, 5000);
+        
+        // Force redirect after delay (fallback)
+        setTimeout(() => {
+            window.location.href = '{{ redirect_url }}';
+        }, ({{ ad_delay }} + 5) * 1000);
+    </script>
+</body>
+</html>
